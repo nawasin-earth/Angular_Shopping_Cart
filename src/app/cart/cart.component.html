@@ -1,0 +1,17 @@
+<div class="wrapper" *ngFor="let i of items">
+
+    <span><a>Name: </a> {{ i.name }} </span>
+    <span><a>, Quantity: </a> {{ i.quantity }} </span>
+    <span><a>, Price: </a> {{ i.price | currency: "THB " }} </span>
+    
+    <button (click)="clear(i.id)">
+        <mat-icon>delete</mat-icon>
+    </button>
+<hr>
+</div>
+    <span><a> Total Price </a> {{ total | currency: "THB " }} </span>
+<br>
+<hr>
+<button mat-raised-button (click)="clearCart()">
+    <mat-icon>add_shopping_cart</mat-icon> Empty Cart
+</button>&nbsp;
